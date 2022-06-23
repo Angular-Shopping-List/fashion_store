@@ -1,0 +1,14 @@
+.signature {
+    font-size: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column {
+    flex: auto;
+    height: 10px;
+    text-align: center;
+    padding: 50px;
+    font-family: Andale Mono;
+}
