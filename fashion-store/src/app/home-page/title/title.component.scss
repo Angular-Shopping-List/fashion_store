@@ -14,7 +14,7 @@ serif;
     // needed to prevent janky scrolling in Safari
     backface-visibility: hidden;
     //100% height of the viewport
-    height: 93vh;
+    height: 30vh;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -65,7 +65,7 @@ serif;
     font-family: $font-serif;
     // Respond to viewport width–works well since
     // we're sizing the image according viewport height
-    font-size: 12vw;
+    font-size: 5vw;
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.1;
