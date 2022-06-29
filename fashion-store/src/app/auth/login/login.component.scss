@@ -1,17 +1,20 @@
 .content {
     height: 80vh;
     width: 100vw;
+    margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(#9198e58f, #e6c3649a);
-  }
-#please-text{
+}
+
+#please-text {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 7rem;
-}  
+}
+
 #login-page {
     background-color: #fff;
     width: 35vw;

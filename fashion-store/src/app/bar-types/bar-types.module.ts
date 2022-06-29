@@ -12,6 +12,7 @@ import { PageBarComponent } from './page-bar/page-bar.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[HomeBarComponent,PageBarComponent]
 })
 export class BarTypesModule { }

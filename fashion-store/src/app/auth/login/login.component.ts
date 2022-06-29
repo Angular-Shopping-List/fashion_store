@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       (res: any) => {
 
         console.log(res)
-        this.router.navigateByUrl('');
+        this.router.navigateByUrl('home-page');
         this._snackBar.open('Log In Successfully!', '', {
           duration: 2000,
         });
