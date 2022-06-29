@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeBarComponent } from './home-bar/home-bar.component';
 import { PageBarComponent } from './page-bar/page-bar.component';
-
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { PageBarComponent } from './page-bar/page-bar.component';
     PageBarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule
   ],
   exports:[HomeBarComponent,PageBarComponent]
 })

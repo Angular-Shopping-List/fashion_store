@@ -25,6 +25,12 @@
 
 .message {
     font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10%;
     color: rgb(65, 132, 159)
+}
+
+.add-remove-buttons {
+    margin-left: 80%;
+    display: flex;
+    flex-direction: row;
 }

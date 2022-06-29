@@ -14,6 +14,7 @@ import{MatSelectModule} from '@angular/material/select';
 import { HomePageRoutingModule } from './home-page-routing.module';
 import {MatTableModule} from '@angular/material/table';
 import { BarTypesModule } from '../bar-types/bar-types.module';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { BarTypesModule } from '../bar-types/bar-types.module';
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule ,
-    MatTableModule  
+    MatTableModule,
+    MatCardModule 
   ]
 })
 export class HomePageModule { }
