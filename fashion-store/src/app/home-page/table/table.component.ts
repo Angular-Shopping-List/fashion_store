@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ClothingItem, Gender } from '../clothingItemInterface';
 import { TableService } from '../table.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddClothingItemComponent } from '../add-clothing-item/add-clothing-item.component';
+import { MatTable } from '@angular/material/table';
 
 @Component({
   selector: 'app-table',
@@ -16,24 +17,33 @@ export class TableComponent implements OnInit {
   public searchValue:string="";
   public displayedColumns: string[]=['name','size','gender','brand','price']
  
-  constructor(private dog:TableService,public dialog:MatDialog) { }
+  constructor(private tableService:TableService,public dialog:MatDialog) { }
+  
+  @ViewChild(MatTable) table!: MatTable<ClothingItem>;
   
   ngOnInit(): void {
     this.getDataTable();
-    //console.log(this.genderList);
+  
   }
   getDataTable(){
-    this.clothingItems = this.dog.getTableList();
+    this.clothingItems = this.tableService.getTableList();
   }
+
+  
   openModal(){
+   
    const dialogRef = this.dialog.open(AddClothingItemComponent)
-   console.log(this.searchValue);
+   console.log(this.clothingItems)
+   this.table.renderRows();
   }
   sortByPrice(){
-    this.dog.sortByPrice();
+    this.tableService.sortByPrice();
   }
   search(){
-   this.clothingItems=this.dog.searchedName(this.searchValue);
+   this.clothingItems=this.tableService.searchedName(this.searchValue);
+  }
+  showData(){
+    this.getDataTable();
   }
   addData(){}
   removeData(){}

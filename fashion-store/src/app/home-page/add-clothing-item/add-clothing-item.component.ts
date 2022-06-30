@@ -19,27 +19,27 @@ export class AddClothingItemComponent implements OnInit {
   }
   createForm()
   {
-    this.form=new FormGroup(
+     this.form=new FormGroup(
      {name:new FormControl("", Validators.required) ,
-      age:new FormControl(null, Validators.required),
-      gender:new FormControl("", Validators.required) ,
-      owner:new FormControl("", [CustomValidators.humanName,Validators.required]),
-      price: new FormControl(null, CustomValidators.myValidator)}
+      size:new FormControl(null, Validators.required),
+      gender:new FormControl("",[Validators.required,CustomValidators.size]) ,
+      brand:new FormControl("", [CustomValidators.brandName,Validators.required]),
+      price: new FormControl(null)}
       );
   }
   addClothItem(){
-
-    const dog: ClothingItem={
+   
+    const clotingItem: ClothingItem={
       name:this.clothingItemName?.value,
       size:this.clothingItemSize?.value,
       brand:this.clothingItemBrand?.value,
       gender:this.clothingItemGender?.value,
       price:this.clothingItemPrice?.value,
     }
-    console.log(dog);
+    console.log(clotingItem);
     console.log(this.form);
     
-    this.clothesService.add(dog);
+    this.clothesService.add(clotingItem);
   }
    
   get clothingItemName(){
